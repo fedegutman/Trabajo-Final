@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body{
+    background-color: #031c2c;
+}
+
+.header{
+    background-color: #27649f;
+}
+
+.logo{
+    height: 40px;
+    width: 62px;
+}
+
+.navegador{
+    padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.items{
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+li{
+    display: inline-block;
+}
+
+.tituloprincipal{
+    margin-right: 470px;
+}
