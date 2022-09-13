@@ -39,3 +39,23 @@ li{
 .tituloprincipal{
     margin-right: 470px;
 }
+.img{
+    size: 100%;
+}
+.pelis{
+    width: 250px;
+    height: 140px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    
+}
+.pelis:hover{
+    width: 280px;
+    height: 155px;
+}
+.seccion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
