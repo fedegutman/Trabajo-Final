@@ -59,3 +59,32 @@ li{
     justify-content: space-around;
     align-items: center;
 }
+.titulo_detalle{
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.detalles_section{
+    display: flex;
+    flex-direction: row;
+}
+.sinopsis_detalle{
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 20px;
+}
+
+.detalles_generos_section{
+    display: flex;
+    flex-direction: row;
+}
+
+.sinopsis_detalle_generos{
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 20px;
+}
+
+.foto_detalle_breakingbad{
+    width: 448;
+    height: 628px;
+}
