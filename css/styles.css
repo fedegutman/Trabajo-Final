@@ -17,6 +17,7 @@ body{
 .logo{
     height: 40px;
     width: 62px;
+    margin-right: 10px;
 }
 
 .navegador{
@@ -38,7 +39,7 @@ li{
 }
 
 .tituloprincipal{
-    margin-right: 470px;
+    margin-right: 50px;
 }
 .img{
     size: 100%;
@@ -78,7 +79,8 @@ li{
 }
 .titulo_detalle{
     font-size: 30px;
-    padding-bottom: 10px;
+    padding: 20px;
+    padding-bottom: 20px;
 }
 .detalles_section{
     display: flex;
@@ -104,11 +106,28 @@ li{
 .foto_detalle_breakingbad{
     width: 448;
     height: 628px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.foto_detalle_topgun{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 .seccion_peliculas{
     margin-top: 23px;
     margin-left: 40px;
     margin-bottom: 15px;
+}
+
+input{
+    color: black;
+    font-size: 15px;
+    width: 400px;
+    margin-right: 30px;
+}
+
+h3{
+    font-size: 17px;
 }
 
 @media(max-width:100%){
