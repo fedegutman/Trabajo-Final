@@ -6,10 +6,8 @@
     color: white;
 }
 
-.padre{
+body{
     background-color: #031c2c;
-    display: flex;
-    flex-wrap: wrap;
 }
 
 .header{
