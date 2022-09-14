@@ -6,8 +6,10 @@
     color: white;
 }
 
-body{
+.padre{
     background-color: #031c2c;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .header{
@@ -88,4 +90,8 @@ li{
 .foto_detalle_breakingbad{
     width: 448;
     height: 628px;
+}
+
+@media(max-width:100%){
+    body{ background-color: #031c2c; }
 }
