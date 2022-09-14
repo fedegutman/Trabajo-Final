@@ -46,7 +46,7 @@ li{
 .pelis{
     width: 250px;
     height: 140px;
-    border-radius: 8px;
+    border-radius: 12px;
     flex-wrap: wrap;
     
 }
@@ -54,7 +54,23 @@ li{
     width: 280px;
     height: 155px;
 }
+.pelis_favoritos{
+    width: 285px;
+    height: 160px;
+    border-radius: 12px;
+    flex-wrap: wrap;
+}
+.pelis_favoritos:hover{
+    width: 320px;
+    height: 180px;
+}
 .seccion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.seccion_favoritos{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
