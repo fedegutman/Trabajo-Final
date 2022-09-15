@@ -31,7 +31,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
 }
+
 
 .items{
     text-decoration: none;
@@ -86,6 +88,7 @@ li{
     height: 140px;
     border-radius: 12px;
     flex-wrap: wrap;
+    border: solid 4px rgb(4, 39, 88);
     
 }
 .pelis:hover{
@@ -124,21 +127,27 @@ li{
     display: flex;
     flex-direction: row;
 }
-.sinopsis_detalle{
-    margin-left: 8px;
-    margin-right: 70px;
-    font-size: 20px;
-}
-
-.detalles_generos_section{
+.box_dg_1{
     display: flex;
     flex-direction: row;
 }
-
-.sinopsis_detalle_generos{
-    padding-left: 8px;
-    padding-right: 8px;
+.box_dg_2{
+    display: flex;
+    flex-direction: column;
+}
+.box_dg_3{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 8px;
+}
+.list_box3_dg{
+    margin-bottom: 10px;
     font-size: 20px;
+}
+.sinopsis_detalle_generos{
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .generos{
