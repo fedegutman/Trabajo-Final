@@ -125,8 +125,8 @@ li{
     flex-direction: row;
 }
 .sinopsis_detalle{
-    padding-left: 8px;
-    padding-right: 8px;
+    margin-left: 8px;
+    margin-right: 70px;
     font-size: 20px;
 }
 
@@ -170,6 +170,23 @@ input{
 
 h3{
     font-size: 17px;
+}
+.box_dp_1{
+    display: flex;
+    flex-direction: row;
+}
+.box_dp_2{
+    display: flex;
+    flex-direction: column;
+}
+.box_dp_3{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 8px;
+}
+.list_box3_dp{
+    margin-bottom: 10px;
 }
 
 @media(max-width:100%){
