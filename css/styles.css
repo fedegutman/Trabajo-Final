@@ -32,7 +32,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
 }
+
 
 .items{
     text-decoration: none;
@@ -87,6 +89,7 @@ li{
     height: 140px;
     border-radius: 12px;
     flex-wrap: wrap;
+    border: solid 4px rgb(4, 39, 88);
     
 }
 .pelis:hover{
@@ -103,7 +106,9 @@ li{
     width: 320px;
     height: 180px;
 }
-
+.sinopsis_detalle_peli{
+    font-size: 25px;
+}
 .seccion{
     display: flex;
     flex-direction: row;
@@ -125,28 +130,34 @@ li{
     display: flex;
     flex-direction: row;
 }
-.sinopsis_detalle{
-    margin-left: 8px;
-    margin-right: 70px;
-    font-size: 20px;
-}
-
-.detalles_generos_section{
+.box_ds_1{
     display: flex;
     flex-direction: row;
 }
-
-.sinopsis_detalle_generos{
-    padding-left: 8px;
-    padding-right: 8px;
+.box_ds_2{
+    display: flex;
+    flex-direction: column;
+}
+.box_ds_3{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 8px;
+}
+.list_box3_ds{
+    margin-bottom: 10px;
     font-size: 20px;
+}
+.sinopsis_detalle_series{
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .generos{
     text-decoration: none;
 }
 
-.foto_detalle_breakingbad{
+.foto_series_breakingbad{
     width: 448;
     height: 628px;
     margin-left: 20px;
@@ -188,6 +199,7 @@ h3{
 }
 .list_box3_dp{
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 @media(max-width:100%){
