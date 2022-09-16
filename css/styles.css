@@ -105,7 +105,9 @@ li{
     width: 320px;
     height: 180px;
 }
-
+.sinopsis_detalle_peli{
+    font-size: 25px;
+}
 .seccion{
     display: flex;
     flex-direction: row;
@@ -127,25 +129,25 @@ li{
     display: flex;
     flex-direction: row;
 }
-.box_dg_1{
+.box_ds_1{
     display: flex;
     flex-direction: row;
 }
-.box_dg_2{
+.box_ds_2{
     display: flex;
     flex-direction: column;
 }
-.box_dg_3{
+.box_ds_3{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     margin-left: 8px;
 }
-.list_box3_dg{
+.list_box3_ds{
     margin-bottom: 10px;
     font-size: 20px;
 }
-.sinopsis_detalle_generos{
+.sinopsis_detalle_series{
     font-size: 20px;
     margin-top: 10px;
 }
@@ -154,7 +156,7 @@ li{
     text-decoration: none;
 }
 
-.foto_detalle_breakingbad{
+.foto_series_breakingbad{
     width: 448;
     height: 628px;
     margin-left: 20px;
@@ -196,6 +198,7 @@ h3{
 }
 .list_box3_dp{
     margin-bottom: 10px;
+    font-size: 20px;
 }
 
 @media(max-width:100%){
