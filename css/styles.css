@@ -153,6 +153,12 @@ li{
     margin-top: 10px;
 }
 
+.seccion_generos{
+    margin-top: 23px;
+    margin-left: 85px;
+    margin-bottom: 15px;
+}
+
 .generos{
     text-decoration: none;
 }
