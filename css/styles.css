@@ -8,6 +8,11 @@
 
 body{
     background-color: #031c2c;
+
+}
+.body_nofooter{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .header{
@@ -73,10 +78,6 @@ li{
 
 .items_footer{
     text-decoration: none;
-}
-.footer_contenedor{
-    
-
 }
 .logo_footer{
     align-self: center;
@@ -192,7 +193,6 @@ li{
 }
 .seccion_peliculas{
     margin-top: 23px;
-    margin-left: 85px;
     margin-bottom: 15px;
 }
 
