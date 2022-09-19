@@ -158,6 +158,11 @@ li{
     align-items: center;
 }
 
+.seccion_buscador{
+    padding: 50px;
+    padding-left: 85px;
+}
+
 .titulo_detalle{
     font-size: 30px;
     padding: 40px;
@@ -232,6 +237,11 @@ li{
     padding-left: 30px;
     padding-bottom: 30px;
     padding-top: 60px;
+}
+
+.seccion_generos1{
+    padding: 30px;
+    padding-left: 85px;
 }
 
 .tit_generos{
