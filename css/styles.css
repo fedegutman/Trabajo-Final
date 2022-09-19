@@ -10,9 +10,10 @@ body{
     background-color: #031c2c;
 
 }
+
 .body_nofooter{
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 50px;
+    padding-top: 10px;
 }
 
 .header{
@@ -36,6 +37,7 @@ body{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 }
 
 .logo{
@@ -43,6 +45,10 @@ body{
     width: 62px;
     margin-right: 10px;
     
+}
+
+.buscador{
+    margin-top: 7px;
 }
 
 .navegador{
@@ -72,13 +78,18 @@ li{
 .texto_footer{
     margin-top: 10px;
     padding: 20px;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: flex-start;
+}
+
+.caja_generos{
+    padding: 50px;
 }
 
 .items_footer{
     text-decoration: none;
 }
+
 .logo_footer{
     align-self: center;
     display: flex;
@@ -92,16 +103,16 @@ li{
     flex-wrap: wrap;
     margin-top: 20px;
     padding: 10px;
-    
-
 }
 
 .tituloprincipal{
     margin-right: 50px;
 }
+
 .img{
     size: 100%;
 }
+
 .pelis{
     width: 250px;
     height: 140px;
@@ -110,71 +121,95 @@ li{
     border: solid 4px rgb(4, 39, 88);
     
 }
+
 .pelis:hover{
     width: 280px;
     height: 155px;
 }
+
 .pelis_favoritos{
     width: 285px;
     height: 160px;
     border-radius: 12px;
     flex-wrap: wrap;
 }
+
 .pelis_favoritos:hover{
     width: 320px;
     height: 180px;
 }
+
 .sinopsis_detalle_peli{
-    font-size: 25px;
+    font-size: 20px;
+    padding-top: 18px;
 }
+
 .seccion{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
+
 .seccion_favoritos{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
+
 .titulo_detalle{
     font-size: 30px;
-    padding: 20px;
+    padding: 40px;
     padding-bottom: 20px;
 }
+
 .detalles_section{
+    padding: 20px;
     display: flex;
     flex-direction: row;
 }
+
+.detalles_series_section{
+    padding: 20px;
+}
+
 .box_ds_1{
     display: flex;
     flex-direction: row;
 }
+
 .box_ds_2{
     display: flex;
     flex-direction: column;
 }
+
 .box_ds_3{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-left: 8px;
+    padding-left: 18px; 
 }
+
 .list_box3_ds{
     margin-bottom: 10px;
     font-size: 20px;
 }
+
 .sinopsis_detalle_series{
     font-size: 20px;
-    margin-top: 10px;
+    padding-top: 18px;
 }
 
 .seccion_generos{
     margin-top: 23px;
     margin-left: 85px;
     margin-bottom: 15px;
+}
+
+.tipo_genero{
+    padding: 10px;
+
 }
 
 .generos{
@@ -191,9 +226,18 @@ li{
     margin-left: 20px;
     margin-right: 20px;
 }
+
 .seccion_peliculas{
-    margin-top: 23px;
-    margin-bottom: 15px;
+    padding-right: 10px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 60px;
+}
+
+.tit_generos{
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 input{
@@ -206,20 +250,24 @@ input{
 h3{
     font-size: 17px;
 }
+
 .box_dp_1{
     display: flex;
     flex-direction: row;
 }
+
 .box_dp_2{
     display: flex;
     flex-direction: column;
 }
+
 .box_dp_3{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-left: 8px;
+    padding-left: 18px;
 }
+
 .list_box3_dp{
     margin-bottom: 10px;
     font-size: 20px;
