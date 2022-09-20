@@ -152,6 +152,7 @@ h3{
 
 .seccion{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -301,6 +302,70 @@ button{
     background-color: #27649f;
 }
 
-@media (max-width: 420px ){
-    
+@media (max-width: 800px ){
+    .seccion{
+        display: flex;
+        flex-direction: column;
+    }
+    .seccion_peliculas{
+        text-align: center;
+        padding-left: 8px;
+    }
+    .navegador{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .barra_buscadora{
+        margin: 0;
+        width: 200px;
+        text-align: center;
+    }
+    .buscador{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+    .tituloprincipal{
+        margin: 0;
+        font-size: 30px;
+    }
+    .items{
+        margin: 0px;
+        padding: 10px;
+    }
+    .header{
+        height: 210px;
+    }
+    .logo{
+        height: 35px;
+        width: 55px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 8px;
+    }
+    .secciones_header{
+        text-align: center;
+    }
+    .footer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .texto_footer{
+        text-align: center;
+    }
+    .logo_footer{
+        text-align: left;
+        margin: 0px;
+        padding: 10px;
+    }
+    .integrantes{
+        margin: 0px;
+        text-align: center;  
+        display: flex;
+        flex-direction: column;
+    }
+    .items_integrantes{
+        justify-content: center;
+    }
 }

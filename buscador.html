@@ -11,24 +11,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 </head>
 <body>
-<header class="header">
-    <div class="navegador">
-        <img  src="img/logo_peliculones.png" alt="logo" class="logo">
-        <H1 class="tituloprincipal">PELICULONES</H1>
-        <form class = "buscador" action="./buscador.html" method="get">
-            <input type="text" placeholder="Buscador" name="buscador" value="">
-        </form>
-    </div>
-    <nav class="secciones_header">
-        <ul>
-            <li><a href="./home.html" class="items">HOME</a></li>
-            <li><a href="./detalle_peliculas.html" class="items"> DETALLE PELICULAS</a></li>
-            <li><a href="./generos.html" class="items"> GENEROS</a></li>
-            <li><a href="./detalle_series.html" class="items">DETALLE SERIES</a></li>
-            <li><a href="./favoritos.html" class="items">FAVORITOS <i class="fa-solid fa-star"></i></a></li>
-        </ul>
-    </nav>   
-</header>
+    <header class="header">
+        <div class="navegador">
+            <img src="img/logo_peliculones.png" alt="logo" class="logo">
+            <H1 class="tituloprincipal">PELICULONES</H1>
+            <form class = "buscador" action="./buscador.html" method="get">
+                <input class ="barra_buscadora" type="text" placeholder="Buscador" name="buscador" value="">
+            </form>
+        </div>
+        <nav class="secciones_header">
+            <ul>
+                <li><a href="./home.html" class="items">HOME</a></li>
+                <li><a href="./detalle_peliculas.html" class="items"> DETALLE PELICULAS</a></li>
+                <li><a href="./generos.html" class="items"> GENEROS</a></li>
+                <li><a href="./detalle_series.html" class="items">DETALLE SERIES</a></li>
+                <li><a href="./favoritos.html" class="items">FAVORITOS <i class="fa-solid fa-star"></i></a></li>
+            </ul>
+        </nav>   
+    </header>
 <h1 class="seccion_buscador">Resultados de -texto insertado-: </h1>
 <article class="seccion_generos">
     <ul> 
@@ -73,12 +73,13 @@
         <H1 class="tituloprincipal">PELICULONES</H1>
     </div>
     <div class = "integrantes"> 
-        <ul>
-            <li class = "lista_footer"><u>Developers</u></li>
-            <li class = "lista_footer">Tomás Moavro</li>
-            <li class = "lista_footer">Nicolás Ehrman</li>
-            <li class = "lista_footer">Federico Gutman</li>
-        </ul>
+        <section class = "items_integrantes">
+            <article class = "lista_footer"><u>Developers</u></article>
+            <article class = "lista_footer">Tomás Moavro</article>
+            <article class = "lista_footer">Nicolás Ehrman</article>
+            <article class = "lista_footer">Federico Gutman</article>
+        </section>
+    </div>
 </footer>
 </body>
 </html>
