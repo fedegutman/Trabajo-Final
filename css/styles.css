@@ -12,7 +12,6 @@ body{
 }
 
 .body_nofooter{
-    padding: 50px;
     padding-top: 10px;
     padding-right: 10px;
 }
@@ -128,7 +127,7 @@ h3{
 }
 
 .pelis:hover{
-    width: 280px;
+    width: 240px;
     height: 155px;
 }
 
