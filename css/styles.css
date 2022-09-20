@@ -406,6 +406,10 @@ button{
         padding-top: 20px;
         padding-bottom: 20px;
     }
+    .foto_detalle_topgun{
+        height: 55vh;
+        width: 80vw;
+    }
     .video_topgun{
         width: 80vw;
     }
