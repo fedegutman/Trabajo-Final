@@ -82,6 +82,10 @@ li{
     justify-content: flex-start;
 }
 
+h3{
+    text-align: center;
+}
+
 .caja_generos{
     padding: 50px;
 }
@@ -132,6 +136,8 @@ li{
     height: 160px;
     border-radius: 12px;
     flex-wrap: wrap;
+    border: solid 4px rgb(4, 39, 88);
+    margin-right: 10px;
 }
 
 .pelis_favoritos:hover{
@@ -154,8 +160,14 @@ li{
 .seccion_favoritos{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: flex-start;
+    padding-left: 80px;
+}
+
+.texto_favoritos{
+    padding-left: 80px;
+    padding-bottom: 30px;
+    padding-top: 40px;
 }
 
 .seccion_buscador{
@@ -204,6 +216,7 @@ li{
 .sinopsis_detalle_series{
     font-size: 20px;
     padding-top: 18px;
+    width: 560px;
 }
 
 .seccion_generos{
@@ -267,8 +280,7 @@ h3{
 }
 
 .box_dp_2{
-    display: flex;
-    flex-direction: column;
+    width: 560px;
 }
 
 .box_dp_3{
@@ -283,7 +295,12 @@ h3{
     font-size: 20px;
 }
 
-@media (max-width: 450px ){
-    body{ background-color: #031c2c; }
+button{
+    height: 50px;
+    font-size: 15px;
+    background-color: #27649f;
+}
 
+@media (max-width: 420px ){
+    
 }
