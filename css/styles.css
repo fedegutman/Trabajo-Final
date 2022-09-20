@@ -303,6 +303,30 @@ button{
 }
 
 @media (max-width: 800px ){
+    
+    .tipo_genero{
+        padding: 10px;
+        text-align: center;
+    }
+    .tit_generos{
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-left: 0px;
+        text-align: center;
+    }
+    .texto_favoritos{
+        padding-bottom: 25px;
+        padding-top: 40px;
+        text-align: center;
+        padding-left: 0px;
+    }
+    .seccion_favoritos{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 0px;
+    }
     .seccion{
         display: flex;
         flex-direction: column;
@@ -445,5 +469,4 @@ button{
         size: 100%;
         width: 80vw;
     }
-
 }
