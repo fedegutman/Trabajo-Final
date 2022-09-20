@@ -14,7 +14,7 @@ body{
 .body_nofooter{
     padding: 50px;
     padding-top: 10px;
-    
+    padding-right: 10px;
 }
 
 .header{
@@ -124,6 +124,7 @@ h3{
     border-radius: 12px;
     flex-wrap: wrap;
     border: solid 4px rgb(4, 39, 88);
+    margin: 5px;
 }
 
 .pelis:hover{
@@ -154,13 +155,13 @@ h3{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: flex-start;
 }
 
 .seccion_favoritos{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
     padding-left: 80px;
 }
@@ -222,7 +223,7 @@ h3{
 
 .seccion_generos{
     margin-top: 23px;
-    margin-left: 85px;
+    padding-left: 35px;
     margin-bottom: 15px;
 }
 
@@ -255,7 +256,7 @@ h3{
 
 .seccion_generos1{
     padding: 30px;
-    padding-left: 85px;
+    padding-left: 65px;
 }
 
 .tit_generos{
@@ -324,12 +325,18 @@ button{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
+        flex-wrap: wrap;
         align-items: center;
         padding-left: 0px;
     }
+    .body_nofooter{
+        padding: 20px
+    }
     .seccion{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .seccion_peliculas{
         text-align: center;
@@ -371,8 +378,8 @@ button{
         text-align: center;
     }
     .pelis{
-        width: 70vw;
-        height: 18vh;
+        width: 250px;
+        height: 140px;
     }
     .footer{
         display: flex;
@@ -382,6 +389,11 @@ button{
     .texto_footer{
         text-align: center;
     }
+    .seccion_generos1{
+        padding: 30px;
+        text-align: center; 
+    }
+
     .logo_footer{
         text-align: left;
         margin: 0px;
@@ -396,19 +408,26 @@ button{
     .items_integrantes{
         justify-content: center;
     }
+    .titulo_detalle{
+        text-align: center;
+    }
+
     .box_dp_1{
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
     
     .box_dp_2{
         width: 80vw;
         padding-top: 20px;
         padding-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
     }
     .foto_detalle_topgun{
-        height: 55vh;
-        width: 80vw;
+        height: 50vh;
+        width: 40vh;
     }
     .video_topgun{
         width: 80vw;
@@ -418,7 +437,7 @@ button{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        padding-left: 18px;
+        padding-left: 0px;
     }
     
     .list_box3_dp{
@@ -445,6 +464,7 @@ button{
         width: 80vw;
         padding-top: 20px;
         padding-bottom: 20px;
+        align-self: center;
     }
     .video_breaking{
         width: 80vw;
