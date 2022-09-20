@@ -119,8 +119,8 @@ h3{
 }
 
 .pelis{
-    width: 17vw;
-    height: 18vh;
+    width: 250px;
+    height: 140px;
     border-radius: 12px;
     flex-wrap: wrap;
     border: solid 4px rgb(4, 39, 88);
