@@ -337,6 +337,7 @@ button{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        padding-left: 0px;
     }
     .seccion_peliculas{
         text-align: center;
