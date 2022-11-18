@@ -8,6 +8,11 @@
 
 }
 
+.titulo_largo{
+    text-align: center;
+    font-size: 10px;
+}
+
 body{
     background-color: #031c2c;
 }
@@ -150,7 +155,23 @@ h3{
     padding-top: 18px;
 }
 
-.seccion{
+.seccion_populares{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 40px
+}
+
+.seccion_series{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 40px
+}
+
+.seccion_calificadas{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;

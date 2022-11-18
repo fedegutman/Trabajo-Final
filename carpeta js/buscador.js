@@ -1,12 +1,3 @@
-// let buscador = document.querySelector('.buscador');
-// buscador.addEventListener('focus', function() {
-
-// });
-
-
-
-
-
 let QS = location.search; //Obtengo la QS
 let stringToObject = new URLSearchParams(QS); //La trasnformo en OL
 let busqueda = stringToObject.get('buscador'); //Obtengo los datos de una propiedad con get()
@@ -26,12 +17,21 @@ fetch(api_key)
 
 
 		for(let i=0; i<info.length; i++){
-			peliculas += `<article class='peliculasjs'>
-								<h3>${info[i].title}</h3>
-								<img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
+			let longitudTitulo = info[i].title.length
+			console.log(longitudTitulo)
+			if (longitudTitulo > 33) {
+				peliculas += `<article class='peliculasjs'>
+									<h3 class='titulo_largo'>${info[i].title}</h3>
+									<img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
 								<!-- <p>Status: ${info[i].status} </p> -->
-								
-							</article>`
+								</article>`
+			} else{
+				peliculas += `<article class='peliculasjs'>
+									<h3>${info[i].title}</h3>
+									<img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
+								<!-- <p>Status: ${info[i].status} </p> -->
+								</article>`
+			};
 		}
 		container.innerHTML = peliculas;
 		document.querySelector('.seccion_buscador').innerText = `Resultados de ${busqueda}`
@@ -41,4 +41,3 @@ fetch(api_key)
 	.catch(function(error){
 		console.log(error);
 	})
-// probando git
