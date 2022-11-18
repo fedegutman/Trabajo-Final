@@ -3,10 +3,13 @@
 
 // });
 
-	let QS = location.search; //Obtengo la QS
-	let stringToObject = new URLSearchParams(QS); //La trasnformo en OL
-	let busqueda = stringToObject.get('buscador'); //Obtengo los datos de una propiedad con get()
-	
+
+
+
+
+let QS = location.search; //Obtengo la QS
+let stringToObject = new URLSearchParams(QS); //La trasnformo en OL
+let busqueda = stringToObject.get('buscador'); //Obtengo los datos de una propiedad con get()
 
 let api_key = `https://api.themoviedb.org/3/search/movie?query=${busqueda}&api_key=7bb779dc3f73731cbf146b210f1f6ce4&language=en-US&page=1&include_adult=false`
 
@@ -38,3 +41,4 @@ fetch(api_key)
 	.catch(function(error){
 		console.log(error);
 	})
+// probando git
