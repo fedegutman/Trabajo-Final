@@ -19,7 +19,7 @@ fetch(api_key)
 		for(let i=0; i<info.length; i++){
 			let longitudTitulo = info[i].title.length
 			console.log(longitudTitulo)
-			if (longitudTitulo > 33) {
+			if (longitudTitulo >= 25) {
 				peliculas += `<article class='peliculasjs'>
 									<h3 class='titulo_largo'>${info[i].title}</h3>
 									<img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
