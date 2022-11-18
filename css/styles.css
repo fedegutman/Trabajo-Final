@@ -229,6 +229,15 @@ h3{
     margin-bottom: 15px;
 }
 
+.peliculasjs{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 23px;
+    padding-left: 35px;
+    margin-bottom: 15px;
+}
+
 .tipo_genero{
     padding: 10px;
 

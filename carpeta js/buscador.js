@@ -3,19 +3,14 @@
 
 // });
 
-
-
-
-
 	let QS = location.search; //Obtengo la QS
 	let stringToObject = new URLSearchParams(QS); //La trasnformo en OL
-	let aBuscar = stringToObject.get('q'); //Obtengo los datos de una propiedad con get()
+	let busqueda = stringToObject.get('buscador'); //Obtengo los datos de una propiedad con get()
 	
-	
-	// let url = `https://rickandmortyapi.com/api/character/?name=${aBuscar}`
 
-let api_key = `https://api.themoviedb.org/3/movie/550?api_key=7bb779dc3f73731cbf146b210f1f6ce4`
-	
+let api_key = `https://api.themoviedb.org/3/search/movie?query=${busqueda}&api_key=7bb779dc3f73731cbf146b210f1f6ce4&language=en-US&page=1&include_adult=false`
+
+
 fetch(api_key)
 	.then(function(response){
 		return response.json();
@@ -23,20 +18,20 @@ fetch(api_key)
 	.then(function(data){
 		console.log(data);
 		let info = data.results
-		let container = document.querySelector('.searchResults');
-		let characters = '';
+		let container = document.querySelector('.seccion_generos');
+		let peliculas = '';
 
 
 		for(let i=0; i<info.length; i++){
-			characters += `<article>
-								<img src=${info[i].image} alt='' />
-								<a href='detalle.html?id=${info[i].id}'><p>Name: ${info[i].name}</p></a>
-								<p>Status: ${info[i].status} </p>
+			peliculas += `<article class='peliculasjs'>
+								<h3>${info[i].title}</h3>
+								<img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
+								<!-- <p>Status: ${info[i].status} </p> -->
 								
 							</article>`
 		}
-		container.innerHTML = characters;
-
+		container.innerHTML = peliculas;
+		document.querySelector('.seccion_buscador').innerText = `Resultados de ${busqueda}`
 		
 	})
 		
