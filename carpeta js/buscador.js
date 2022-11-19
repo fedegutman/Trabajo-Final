@@ -34,7 +34,7 @@ fetch(api_key)
 			};
 		}
 		container.innerHTML = peliculas;
-		document.querySelector('.seccion_buscador').innerText = `Resultados de ${busqueda}`
+		document.querySelector('.seccion_buscador').innerText = `Resultados de búsqueda: ${busqueda}`
 		
 	})
 		

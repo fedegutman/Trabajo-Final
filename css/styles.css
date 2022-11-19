@@ -53,6 +53,11 @@ body{
     box-sizing: content-box;   
 }
 
+.logotmdb{
+    height:35px;
+    width: 110px;
+}
+
 .buscador{
     margin-top: 7px;
 }
