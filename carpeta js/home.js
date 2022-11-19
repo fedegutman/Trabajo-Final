@@ -1,16 +1,18 @@
 let formulario = document.querySelector(".buscador");
 let campoBuscar = document.querySelector(".barra_buscadora");
 
-
-// arreglar para que funcione en el home
 // sacar buzz del buscador y sacar texto insertado
+// arreglar css responsive 
+// imagenes predeterminadas para pelis sin poster
+
 console.log(campoBuscar.value);
 formulario.addEventListener('submit',function(event){
 	event.preventDefault();
 	if (campoBuscar.value == ''){
-		alert('El campo esta vacio!')
-	}
-	else{
+		alert('El campo esta vacío!')
+	} else if (campoBuscar.value.length < 3){
+        alert('La búsqueda debe tener al menos 3 caracteres!')
+    } else{
 		this.submit()
 	}
 })
