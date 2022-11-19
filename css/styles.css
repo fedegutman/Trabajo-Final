@@ -92,6 +92,12 @@ h3{
     text-align: center;
 }
 
+h6{
+    text-align: center;
+    font-size: 16px;
+    padding-top: 5px;
+}
+
 .caja_generos{
     padding: 50px;
 }
@@ -129,7 +135,6 @@ h3{
     border-radius: 12px;
     flex-wrap: wrap;
     border: solid 4px rgb(4, 39, 88);
-    margin: 5px;
 }
 
 .pelis:hover{

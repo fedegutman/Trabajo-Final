@@ -19,11 +19,13 @@ fetch(api_key_pelispopulares)
             peliculas += `<article class='peliculasjs'>
                                 <h3 class='titulo_largo'>${info[i].title}</h3>
                                 <img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
+                                <h6>${info[i].release_date}<h6>
                             </article>`
         } else {
             peliculas += `<article class='peliculasjs'>
                                 <h3>${info[i].title}</h3>
                                 <img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
+                                <h6>${info[i].release_date}<h6>
                             </article>`
         };
     }
