@@ -1,3 +1,20 @@
+let formulario = document.querySelector(".buscador");
+let campoBuscar = document.querySelector(".barra_buscadora");
+
+
+// arreglar para que funcione en el home
+// sacar buzz del buscador y sacar texto insertado
+console.log(campoBuscar.value);
+formulario.addEventListener('submit',function(event){
+	event.preventDefault();
+	if (campoBuscar.value == ''){
+		alert('El campo esta vacio!')
+	}
+	else{
+		this.submit()
+	}
+})
+
 let api_key_pelispopulares= "https://api.themoviedb.org/3/movie/popular?api_key=7bb779dc3f73731cbf146b210f1f6ce4&language=en-US"
 
 fetch(api_key_pelispopulares)
