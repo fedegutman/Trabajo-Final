@@ -279,7 +279,11 @@ h6{
     text-decoration: none;
 }
 
+.contenedor_imagen{
+    width: 448;
+}
 .foto_series_breakingbad{
+
     width: 448;
     height: 628px;
     margin-left: 20px;

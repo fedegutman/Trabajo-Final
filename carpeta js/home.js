@@ -36,15 +36,19 @@ fetch(api_key_pelispopulares)
         // console.log(longitudTitulo)
         if (longitudTitulo >= 25){
             peliculas += `<article class='peliculasjs'>
+                            <a href= "detalle_peliculas.html?id=${info[i].id}"> 
                                 <h3 class='titulo_largo'>${info[i].title}</h3>
                                 <img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
                                 <h6>${info[i].release_date}<h6>
+                            </a>
                             </article>`
         } else {
             peliculas += `<article class='peliculasjs'>
+                            <a href= "detalle_peliculas.html?id=${info[i].id}">
                                 <h3>${info[i].title}</h3>
                                 <img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
                                 <h6>${info[i].release_date}<h6>
+                            </a>
                             </article>`
         };
     }
@@ -76,13 +80,17 @@ fetch(api_key_series)
         console.log(longitudTitulo)
         if (longitudTitulo >= 25){
             series += `<article class='peliculasjs'>
+                        <a href= "detalle_series.html?id=${info[i].id}"> 
                                 <h3 class='titulo_largo'>${info[i].name}</h3>
                                 <img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
+                        </a>
                             </article>`
         } else {
             series += `<article class='peliculasjs'>
+                        <a href= "detalle_series.html?id=${info[i].id}">
                                 <h3>${info[i].name}</h3>
                                 <img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
+                        </a>
                             </article>`
         };
     }
@@ -113,13 +121,17 @@ fetch(api_key_calificadas)
         console.log(longitudTitulo)
         if (longitudTitulo >= 25){
             peliculas += `<article class='peliculasjs'>
+                            <a href= "detalle_peliculas.html?id=${info[i].id}">
                                 <h3 class='titulo_largo'>${info[i].title}</h3>
                                 <img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
+                            </a>
                             </article>`
         } else {
             peliculas += `<article class='peliculasjs'>
+                            <a href= "detalle_peliculas.html?id=${info[i].id}">
                                 <h3>${info[i].title}</h3>
                                 <img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
+                            </a>
                             </article>`
         };
     }
