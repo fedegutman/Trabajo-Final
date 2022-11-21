@@ -63,16 +63,19 @@ fetch(url_plataformas)
         let contenedor_html = document.querySelector('.texto_plataformas')
         let plataformas_argentinas = data.results.AR.flatrate
         console.log(plataformas_argentinas)
-			if (data.results.AR){
-				for (let i of plataformas_argentinas){
-				contenedor_html.innerHTML +=
-				`<div> 
-				${i.provider_name}
-				<img src="https://image.tmdb.org/t/p/original${i.logo_path}" alt="${i.provider_name}" class="logo_plataformas"> </img>
-				</div>`
-				}
+			if (data.results.AR == undefined){
+                contenedor_html.innerHTML += "No disponible en Argentina"
+				
 			}else{
-				contenedor_html.innerHTML += "No disponible en Argentina"
+				
+                for (let i of plataformas_argentinas){
+                    contenedor_html.innerHTML +=
+                    `<div> 
+                    ${i.provider_name}
+                    <img src="https://image.tmdb.org/t/p/original${i.logo_path}" alt="${i.provider_name}" class="logo_plataformas"> </img>
+                    </div>`
+                }
+                    
 			}
 		
 		
@@ -80,4 +83,26 @@ fetch(url_plataformas)
 
 
 
+    let pelisFavoritas = []
+    let recuperoStoragePelis = localStorage.getItem("pelisfavoritas")
+    if (recuperoStoragePelis !== null){
+        favoritosPeli = JSON.parse(recuperoStoragePelis)
+    }
+    let botonfavoritos = document.querySelector(".boton_favoritos");
+    if (favoritosPeli.includes(id)){
+        botonfavoritos.innerText = "Remover de favoritos"
+    }
+    botonfavoritos.addEventListener("click", function(){
+        if(favoritosPeli.includes(id)){
+            let indicePeli = favoritosPeli.indexOf(id);
+            favoritosPeli.splice(indicePeli,1)
+            botonfavoritos.innerText = "Agregar a Favoritos"
+        } else {
+            favoritosPeli.push(id)
+            botonfavoritos.innerText = "Sacar de Favoritos";
+        }
+        let favs = JSON.stringify(favoritosPeli)
+        localStorage.setItem("pelisfavoritas", favs)
+        console.log(localStorage)
+    })
     
