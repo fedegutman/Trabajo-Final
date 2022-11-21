@@ -57,12 +57,17 @@ fetch(url_plataformas)
         let contenedor_html = document.querySelector('.texto_plataformas')
         let plataformas_argentinas = data.results.AR.flatrate
         console.log(plataformas_argentinas)
-        for (let i of plataformas_argentinas){
+        if (data.results.AR){
+            for (let i of plataformas_argentinas){
             contenedor_html.innerHTML +=
             `<div> 
             ${i.provider_name}
+            <img src="https://image.tmdb.org/t/p/original${i.logo_path}" alt="${i.provider_name}" class="logo_plataformas"> </img>
             </div>`
-
+            }
+        }else{
+            contenedor_html.innerHTML = "No disponible en Argentina"
         }
+
+        
     })
-    

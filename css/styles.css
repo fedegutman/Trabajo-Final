@@ -275,6 +275,15 @@ h6{
 
 }
 
+.plataforma_nombre_logo{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo_plataformas{
+    width: 30px;
+    height: 30px;
+}
 .generos{
     text-decoration: none;
 }
@@ -290,6 +299,8 @@ h6{
     margin-right: 20px;
 }
 .foto_detalle_topgun{
+    width: 448;
+    height: 628px;
     margin-left: 20px;
     margin-right: 20px;
 }
