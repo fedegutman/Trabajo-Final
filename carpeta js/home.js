@@ -124,6 +124,7 @@ fetch(api_key_calificadas)
                             <a href= "detalle_peliculas.html?id=${info[i].id}">
                                 <h3 class='titulo_largo'>${info[i].title}</h3>
                                 <img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
+                                <h6>${info[i].release_date}<h6>
                             </a>
                             </article>`
         } else {
@@ -131,6 +132,7 @@ fetch(api_key_calificadas)
                             <a href= "detalle_peliculas.html?id=${info[i].id}">
                                 <h3>${info[i].title}</h3>
                                 <img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
+                                <h6>${info[i].release_date}<h6>
                             </a>
                             </article>`
         };

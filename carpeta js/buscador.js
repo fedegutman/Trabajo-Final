@@ -77,6 +77,9 @@ fetch(api_key_series)
 	let container = document.querySelector('.seccion_generos');
 	let series = '';
 
+	if (data.results.length == 0){
+		series += "<p class='no_results'>¡Ups! No hay resultados para su busqueda :( </p>"
+	}
 	
 	for(let i=0; i<info.length; i++){
 		let longitudTitulo = info[i].name.length
@@ -125,3 +128,4 @@ fetch(api_key_series)
 .catch(function(error){
 	console.log(error);
 })
+

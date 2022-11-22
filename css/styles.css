@@ -134,6 +134,12 @@ h6{
     padding: 10px;
 }
 
+.no_results{
+    font-size: 30px;
+    margin-left: 50px;
+    margin-bottom: 300px;
+}
+
 .recomendaciones{
     display: none;
     flex-direction: row;
