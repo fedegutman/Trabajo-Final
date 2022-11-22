@@ -20,18 +20,18 @@ fetch(url_Pelis_generos)
     let info = data.results
     let container = document.querySelector('.peliculas_generos');
     let peliculas = '';
-    console.log(info[id].title)
+    let seccion_generos1 = document.querySelector('.seccion_generos1')
     for(let i=0; i < info.length; i++){
         let longitudTitulo = info[i].title.length
         if (longitudTitulo >= 25){
-            peliculas += `<article class='peliculasjs'>
+            peliculas += ` <article class='peliculasjs'>
                             <a href= "detalle_peliculas.html?id=${info[i].id}">
                                 <h3 class='titulo_largo'>${info[i].title}</h3>
                                 <img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
                             </a>
                             </article>`
         } else {
-            peliculas += `<article class='peliculasjs'>
+            peliculas += ` <article class='peliculasjs'>
                             <a href= "detalle_peliculas.html?id=${info[i].id}">
                                 <h3>${info[i].title}</h3>
                                 <img class = 'pelis' src=https://image.tmdb.org/t/p/w500/${info[i].poster_path} alt='' />
@@ -82,3 +82,4 @@ fetch(url_series_generos)
 .catch(function(error){
     console.log('El error es: ' + error);
 })
+
