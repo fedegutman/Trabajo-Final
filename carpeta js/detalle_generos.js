@@ -1,11 +1,24 @@
-url_detalle_generos = `https://api.themoviedb.org/3/genre/movie/list?api_key=7bb779dc3f73731cbf146b210f1f6ce4&language=en-US`
+let qs = location.search
+qs_OL= new URLSearchParams(qs);
 
-fetch(url_detalle_generos)
+let idPelis = qs_OL.get('id_peliculas')
+let idSeries = qs_OL.get('id_series')
+
+
+let url_Pelis = `https://api.themoviedb.org/3/discover/movie?api_key=35664717fe783f635e22f58af930e36f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${idPelis}&with_watch_monetization_types=flatrate`
+
+let url_series = `https://api.themoviedb.org/3/discover/movie?api_key=35664717fe783f635e22f58af930e36f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${idSeries}&with_watch_monetization_types=flatrate`
+
+
+
+fetch(url_Pelis)
 .then(function(response){
     return response.json();
 })
 .then(function(data){
     console.log(data);
+    let info = data.results
+    console.log(info);
     let container = document.querySelector('.seccion_generos');
     let peliculas = '';
 
