@@ -548,8 +548,8 @@ button{
         text-align: center;
     }
     .pelis{
-        width: 250px;
-        height: 140px;
+        width: 200px;
+        height: 300px;
     }
     .footer{
         display: flex;

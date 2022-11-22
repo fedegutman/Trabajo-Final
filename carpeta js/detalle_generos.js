@@ -7,7 +7,7 @@ let idSeries = qs_OL.get('id_series')
 
 let url_Pelis = `https://api.themoviedb.org/3/discover/movie?api_key=35664717fe783f635e22f58af930e36f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${idPelis}&with_watch_monetization_types=flatrate`
 
-let url_series = `https://api.themoviedb.org/3/discover/movie?api_key=35664717fe783f635e22f58af930e36f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${idSeries}&with_watch_monetization_types=flatrate`
+let url_series = `https://api.themoviedb.org/3/discover/tv?api_key=35664717fe783f635e22f58af930e36f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${idSeries}&with_watch_monetization_types=flatrate`
 
 
 fetch(url_Pelis)
