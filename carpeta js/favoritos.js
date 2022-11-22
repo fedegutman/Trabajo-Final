@@ -33,17 +33,21 @@ function buscarYMostrarFavoritos (id){
             if (data.original_title.length >= 25){
                 pelisFavoritas.innerHTML += `
                             <article class='peliculasjs'>
+                            <a href='detalle_peliculas.html?id=${data.id}'>
                             <h3 class = 'titulo_largo'>${data.original_title}</h3>
                             <img src="https://image.tmdb.org/t/p/original${data.poster_path}" alt="${data.name}" class="pelis"></img>
                             <h6>${data.release_date}</h6>
+                            </a>
                             </article>`
 
             } else{
                 pelisFavoritas.innerHTML += `
                             <article class='peliculasjs'>
+                            <a href='detalle_peliculas.html?id=${data.id}'>
                             <h3>${data.original_title}</h3>
                             <img src="https://image.tmdb.org/t/p/original${data.poster_path}" alt="${data.name}" class="pelis"></img>
                             <h6>${data.release_date}</h6>
+                            </a>
                             </article>`
                             
             }
@@ -73,10 +77,10 @@ if (seleccionadosSeries == null || seleccionadosSeries.length == 0){
 } else {
     // pedir a la api los dotos de todos los ids del array de personajes elegidos
     for (let i= 0; i<seleccionadosSeries.length; i++){
-        buscarYMostrarFavoritos(seleccionadosSeries[i])
+        buscarYMostrarFavoritos2(seleccionadosSeries[i])
     }
 }
-function buscarYMostrarFavoritos (id){
+function buscarYMostrarFavoritos2 (id){
     //fetch
     let urlSeries = `https://api.themoviedb.org/3/tv/${id}?api_key=7bb779dc3f73731cbf146b210f1f6ce4&language=en-US`
 
