@@ -34,16 +34,15 @@ fetch(api_key_detalle_peliculas)
 		let imagen = document.querySelector('.contenedor_imagen_pelis')
 		imagen.innerHTML = `<img src="https://image.tmdb.org/t/p/original${data.poster_path}" alt="${data.name}" class="foto_detalle_topgun"></img>`
 
+        
 	
         let generos = document.querySelector('.texto_generos')
-        for (let i of data.genres){
-            generos.innerHTML += `<a href="detalle_generos.html?id=${i.id}"> 
-            ${i.name}
+        for (let i = 0; i < data.genres.length; i++){
+            console.log(data.genres)
+            generos.innerHTML += `<a href="detalle_generos.html?id=${data.genres[i].id}"> 
+            ${data.genres[i].name}
             </a> <br> </br>`
         }
-
-        
-        
 
     })
     .catch(function(error){
@@ -82,26 +81,27 @@ fetch(url_plataformas)
     })
 
 
-
     let pelisFavoritas = []
     let recuperoStoragePelis = localStorage.getItem("pelisfavoritas")
+    console.log(recuperoStoragePelis)
+
     if (recuperoStoragePelis !== null){
-        favoritosPeli = JSON.parse(recuperoStoragePelis)
+        pelisFavoritas = JSON.parse(recuperoStoragePelis)
     }
     let botonfavoritos = document.querySelector(".boton_favoritos");
-    if (favoritosPeli.includes(id)){
+    if (pelisFavoritas.includes(id)){
         botonfavoritos.innerText = "Remover de favoritos"
     }
     botonfavoritos.addEventListener("click", function(){
-        if(favoritosPeli.includes(id)){
-            let indicePeli = favoritosPeli.indexOf(id);
-            favoritosPeli.splice(indicePeli,1)
+        if(pelisFavoritas.includes(id)){
+            let indicePeli = pelisFavoritas.indexOf(id);
+            pelisFavoritas.splice(indicePeli,1)
             botonfavoritos.innerText = "Agregar a Favoritos"
         } else {
-            favoritosPeli.push(id)
+            pelisFavoritas.push(id)
             botonfavoritos.innerText = "Sacar de Favoritos";
         }
-        let favs = JSON.stringify(favoritosPeli)
+        let favs = JSON.stringify(pelisFavoritas)
         localStorage.setItem("pelisfavoritas", favs)
         console.log(localStorage)
     })

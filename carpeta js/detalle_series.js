@@ -71,3 +71,29 @@ fetch(url_plataformas)
 
         
     })
+
+
+let seriesFavoritas = []
+let recuperoStorageSeries = localStorage.getItem("seriesfavoritas")
+console.log(recuperoStorageSeries)
+
+if (recuperoStorageSeries !== null){
+    seriesFavoritas = JSON.parse(recuperoStorageSeries)
+}
+let botonfavoritos = document.querySelector(".boton_favoritos");
+if (seriesFavoritas.includes(id)){
+    botonfavoritos.innerText = "Remover de favoritos"
+}
+botonfavoritos.addEventListener("click", function(){
+    if(seriesFavoritas.includes(id)){
+        let indiceSerie = seriesFavoritas.indexOf(id);
+        seriesFavoritas.splice(indiceSerie,1)
+        botonfavoritos.innerText = "Agregar a Favoritos"
+    } else {
+        seriesFavoritas.push(id)
+        botonfavoritos.innerText = "Sacar de Favoritos";
+    }
+    let favs = JSON.stringify(seriesFavoritas)
+    localStorage.setItem("seriesfavoritas", favs)
+    console.log(localStorage)
+})

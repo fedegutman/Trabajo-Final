@@ -12,6 +12,7 @@
     text-align: center;
     font-size: 13px;
     padding-top: 14px;
+    text-decoration: none;
 }
 
 body{
@@ -95,6 +96,7 @@ li{
 
 h3{
     text-align: center;
+    text-decoration: none;
 }
 
 h6{
@@ -198,6 +200,14 @@ h6{
     padding-left: 80px;
 }
 
+.seccion_favoritos_series{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 80px;
+}
+
 .texto_favoritos{
     padding-left: 80px;
     padding-bottom: 30px;
@@ -272,6 +282,7 @@ h6{
 
 .tipo_genero{
     padding: 10px;
+    font-size: 40px;
 
 }
 
@@ -319,8 +330,9 @@ h6{
 }
 
 .tit_generos{
-    font-size: 30px;
-    margin-bottom: 20px;
+    padding-left: 50px;
+    padding-top: 50px;
+    font-size: 50px;
     margin-left: 10px;
 }
 
@@ -333,6 +345,11 @@ input{
 
 h3{
     font-size: 25px;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
 }
 
 .box_dp_1{
