@@ -32,14 +32,17 @@ fetch(api_key_detalle_peliculas)
         calificacion.innerHTML = data.vote_average
 
 		let imagen = document.querySelector('.contenedor_imagen_pelis')
-		imagen.innerHTML = `<img src="https://image.tmdb.org/t/p/original${data.poster_path}" alt="${data.name}" class="foto_detalle_topgun"></img>`
-
+        if (data.poster_path == null){
+            imagen.innerHTML = `<img src="img/no_image.png" alt="${data.name}" class="foto_detalle_topgun"></img>`
+        } else{
+		    imagen.innerHTML = `<img src="https://image.tmdb.org/t/p/original${data.poster_path}" alt="${data.name}" class="foto_detalle_topgun"></img>`
+        }
         
 	
         let generos = document.querySelector('.texto_generos')
         for (let i = 0; i < data.genres.length; i++){
             console.log(data.genres)
-            generos.innerHTML += `<a href="detalle_generos.html?id=${data.genres[i].id}"> 
+            generos.innerHTML += `<a class='texto_azul' href="detalle_generos.html?id=${data.genres[i].id}"> 
             ${data.genres[i].name}
             </a> <br> </br>`
         }

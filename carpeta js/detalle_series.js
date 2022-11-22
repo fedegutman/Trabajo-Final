@@ -26,11 +26,15 @@ fetch(api_key_detalle_series)
         estreno.innerHTML = data.first_air_date
 
         let imagen = document.querySelector('.contenedor_imagen')
-        imagen.innerHTML = `<img src="https://image.tmdb.org/t/p/original${data.poster_path}" alt="${data.name}" class="foto_series_breakingbad"></img>`
+        if (data.poster_path == null){
+            imagen.innerHTML = `<img src="img/no_image.png" alt="${data.name}" class="foto_series_breakingbad"></img>`
+        } else {
+            imagen.innerHTML = `<img src="https://image.tmdb.org/t/p/original${data.poster_path}" alt="${data.name}" class="foto_series_breakingbad"></img>`
+        }
 
         let generos = document.querySelector('.texto_generos')
         for (let i of data.genres){
-            generos.innerHTML += `<a href="detalle_generos.html?id=${i.id}"> 
+            generos.innerHTML += `<a class ='texto_azul' href="detalle_generos.html?id=${i.id}"> 
             ${i.name}
             </a> <br> </br>`
         }

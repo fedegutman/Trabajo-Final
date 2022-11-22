@@ -136,6 +136,35 @@ h6{
     size: 100%;
 }
 
+.texto_calificacion{
+    text-align: center;
+    color:#296fb4;
+}
+
+.texto_duracion{
+    text-align: center;
+    color:#296fb4;
+}
+
+.texto_estreno{
+    text-align: center;
+    color:#296fb4;
+}
+
+.texto_generos{
+    text-align: center;
+    padding-top: 5px;
+    color:#296fb4;
+}
+
+.texto_azul{
+    color:#296fb4;
+}
+
+.texto_plataformas{
+    text-align: center;
+}
+
 .pelis{
     width: 300px;
     height: 400px;
