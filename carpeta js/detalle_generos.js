@@ -1,5 +1,5 @@
 let qs = location.search
-qs_OL= new URLSearchParams(qs);
+let qs_OL= new URLSearchParams(qs);
 
 let idPelis = qs_OL.get('id_peliculas')
 let idSeries = qs_OL.get('id_series')

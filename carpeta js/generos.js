@@ -1,5 +1,8 @@
-url_generos = 'https://api.themoviedb.org/3/genre/movie/list?api_key=7bb779dc3f73731cbf146b210f1f6ce4&language=en-US'
+let qs = location.search
+let queryStringToObject = new URLSearchParams(qs);
+let id = queryStringToObject.get('id');
 
+let url_generos =  `https://api.themoviedb.org/3/genre/movie/list?api_key=7bb779dc3f73731cbf146b210f1f6ce4&language=en-US`
 fetch(url_generos)
     .then(function(response){
         return response.json();
@@ -15,7 +18,7 @@ fetch(url_generos)
         for(let i=0; i < info.length; i++){
 
                 generos += `<article>
-                                <h2 class='tipo_genero'><a href='./detalle_generos.html' class='generos'>${info[i].name}<a/><h2>
+                                <h2 class='tipo_genero'><a href='./detalle_generos.html?id=${info[i].id}' class='generos'>${info[i].name}<a/><h2>
                             </article>`
         
         container.innerHTML = generos;    
