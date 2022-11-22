@@ -262,7 +262,7 @@ h6{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding-left: 80px;
+    padding-left: 60px;
 }
 
 .seccion_favoritos_series{
@@ -270,7 +270,7 @@ h6{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding-left: 80px;
+    padding-left: 60px;
 }
 
 .texto_favoritos{
