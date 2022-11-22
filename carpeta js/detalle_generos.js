@@ -9,17 +9,17 @@ let url_Pelis_generos = `https://api.themoviedb.org/3/discover/movie?api_key=356
 
 let url_series_generos = `https://api.themoviedb.org/3/discover/tv?api_key=35664717fe783f635e22f58af930e36f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
 
+// let titulo = document.querySelector('.titulo_genero')
 
 fetch(url_Pelis_generos)
 .then(function(response){
     return response.json();
 })
 .then(function(data){
+    console.log(info)
     let info = data.results
     let container = document.querySelector('.peliculas_generos');
     let peliculas = '';
-    let titulo = document.querySelector('.titulo_genero')
-    titulo.innerHTML = info[id].name
     console.log(info[id].title)
     for(let i=0; i < info.length; i++){
         let longitudTitulo = info[i].title.length
