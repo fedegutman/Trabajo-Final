@@ -15,6 +15,12 @@
     text-decoration: none;
 }
 
+.boton_recomendaciones{
+    text-align: center;
+    width: 500px;
+    height: 50px;
+}
+
 body{
     background-color: #031c2c;
 }
@@ -126,6 +132,30 @@ h6{
     flex-wrap: wrap;
     margin-top: 20px;
     padding: 10px;
+}
+
+.recomendaciones{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.titulo_recomendados{
+    font-size: 15px;
+    margin-right: 20px;
+}
+
+.foto_recomendaciones{
+    width: 150px;
+    height: 200px;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    border: solid 4px rgb(4, 39, 88);
+    margin-right: 20px;
+}
+
+.texto_sinopsis{
+    padding-bottom: 30px;
 }
 
 .tituloprincipal{
@@ -307,6 +337,18 @@ h6{
     margin-top: 23px;
     padding-left: 35px;
     margin-bottom: 15px;
+}
+
+.pelis_recomendadas{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 50px;
+}
+
+.conteinerrecomendados{
+    display: flex;
+    flex-direction: column;
 }
 
 .tipo_genero{

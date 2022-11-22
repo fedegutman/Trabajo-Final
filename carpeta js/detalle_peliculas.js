@@ -109,3 +109,57 @@ fetch(url_plataformas)
         console.log(localStorage)
     })
     
+
+
+url_recomendaciones = `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=0317bbf7efac7dd04b2c2c3748377d57&language=en-US&page=1`
+let botonRecomendaciones = document.querySelector('.boton_recomendaciones');
+let mostrarRecomendados = document.querySelector('.recomendaciones');
+botonRecomendaciones.addEventListener('click', function(){
+    if (mostrarRecomendados.style.display == 'flex'){
+        mostrarRecomendados.style.display = 'none'
+        botonRecomendaciones.innerText = 'Ver recomendaciones'
+    } else{
+        mostrarRecomendados.style.display = 'flex'
+        botonRecomendaciones.innerText = 'Ocultar recomendaciones'
+    }   
+})
+
+fetch(url_recomendaciones)
+.then(function(response){
+    return response.json();
+})
+.then(function(data){
+        console.log(data);
+        let conteinerRecomendaciones = document.querySelector('.recomendaciones')
+        info = data.results
+        console.log(info.name)
+
+        recomendaciones = '';
+        recomendaciones += `<article class='pelis_recomendadas'>
+                                <a class ='conteinerrecomendados' href='detalle_peliculas.html?id=${info[0].id}'>
+                                <h3 class='titulo_recomendados'>${info[0].original_title}</h3>
+                                <img class = 'foto_recomendaciones' src='https://image.tmdb.org/t/p/w500/${info[0].poster_path}' alt=''>
+                                </a>
+                            </article>`
+        recomendaciones += `<article class='pelis_recomendadas'>
+                                <a class ='conteinerrecomendados' href='detalle_peliculas.html?id=${info[1].id}'>
+                                <h3 class='titulo_recomendados'>${info[1].original_title}</h3>
+                                <img class = 'foto_recomendaciones' src='https://image.tmdb.org/t/p/w500/${info[1].poster_path}' alt=''>
+                                </a>
+                            </article>`
+
+        recomendaciones += `<article class='pelis_recomendadas'>
+                                <a class ='conteinerrecomendados' href='detalle_peliculas.html?id=${info[2].id}'>
+                                <h3 class='titulo_recomendados'>${info[2].original_title}</h3>
+                                <img class = 'foto_recomendaciones' src='https://image.tmdb.org/t/p/w500/${info[2].poster_path}' alt=''>
+                                </a>
+                            </article>`
+
+    conteinerRecomendaciones.innerHTML = recomendaciones
+})
+.catch(function(error){
+        console.log('El error es: ' + error);
+})
+
+
+
