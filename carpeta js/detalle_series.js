@@ -59,9 +59,10 @@ fetch(url_plataformas)
         console.log(data);
 
         let contenedor_html = document.querySelector('.texto_plataformas')
-        let plataformas_argentinas = data.results.AR.flatrate
-        console.log(plataformas_argentinas)
+        
         if (data.results.AR){
+            let plataformas_argentinas = data.results.AR.flatrate
+            console.log(plataformas_argentinas)
             for (let i of plataformas_argentinas){
             contenedor_html.innerHTML +=
             `<div> 

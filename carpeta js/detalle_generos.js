@@ -16,7 +16,6 @@ fetch(url_Pelis_generos)
     return response.json();
 })
 .then(function(data){
-    console.log(info)
     let info = data.results
     let container = document.querySelector('.peliculas_generos');
     let peliculas = '';
