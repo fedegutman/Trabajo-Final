@@ -11,15 +11,47 @@ let url_series_generos = `https://api.themoviedb.org/3/discover/tv?api_key=35664
 
 // let titulo = document.querySelector('.titulo_genero')
 
+let qstitulo = location.search
+let queryStringToObject = new URLSearchParams(qs);
+let idtitulo = queryStringToObject.get('id');
+
+let url_generos =  `https://api.themoviedb.org/3/genre/movie/list?api_key=7bb779dc3f73731cbf146b210f1f6ce4&language=en-US`
+genero = ''
+fetch(url_generos)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data);
+        let info = data.genres
+        console.log(info)
+    
+        for(let i=0; i < info.length; i++){
+            if (info[i].id == id){
+                genero += info[i].name
+            }
+        }
+    })
+    .catch(function(error){
+        console.log('El error es: ' + error);
+    })
+
+
+
+
 fetch(url_Pelis_generos)
 .then(function(response){
     return response.json();
 })
 .then(function(data){
     let info = data.results
-    let container = document.querySelector('.peliculas_generos');
+    console.log(info)
+    let container = document.querySelector('.seccion_generos');
     let peliculas = '';
     let seccion_generos1 = document.querySelector('.seccion_generos1')
+    let seccion_generos2 = document.querySelector('.seccion_generos2')
+    seccion_generos1.innerHTML = genero
+    seccion_generos2.innerHTML = `Aquí encontrarás las mejores películas dentro de ${genero}.`
     for(let i=0; i < info.length; i++){
         let longitudTitulo = info[i].title.length
         if (longitudTitulo >= 25){

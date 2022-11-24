@@ -405,6 +405,10 @@ h6{
     padding: 30px;
     padding-left: 65px;
 }
+.seccion_generos2{
+    padding: 30px;
+    padding-left: 65px;
+}
 
 .tit_generos{
     padding-left: 50px;
@@ -562,6 +566,11 @@ button{
     .seccion_generos1{
         padding: 30px;
         text-align: center; 
+    }
+
+    .seccion_generos2{
+        padding: 30px;
+        text-align: center;
     }
     
     .seccion_generos{
