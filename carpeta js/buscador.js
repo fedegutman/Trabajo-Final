@@ -64,8 +64,6 @@ fetch(api_key)
 
 // -------------------------------------------------------------------------------------------------------
 
-
-// preguntar como hacer que aparezcan ambos resultados en simultaneo
 let api_key_series =`https://api.themoviedb.org/3/search/tv?query=${busqueda}&api_key=7bb779dc3f73731cbf146b210f1f6ce4&language=en-US&page=1&include_adult=false`
 fetch(api_key_series)
 .then(function(response){

@@ -1,10 +1,6 @@
 let formulario = document.querySelector(".buscador");
 let campoBuscar = document.querySelector(".barra_buscadora");
 
-// sacar buzz del buscador y sacar texto insertado
-// arreglar css responsive 
-// imagenes predeterminadas para pelis sin poster
-
 console.log(campoBuscar.value);
 formulario.addEventListener('submit',function(event){
 	event.preventDefault();

@@ -9,8 +9,6 @@ let url_Pelis_generos = `https://api.themoviedb.org/3/discover/movie?api_key=356
 
 let url_series_generos = `https://api.themoviedb.org/3/discover/tv?api_key=35664717fe783f635e22f58af930e36f&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&with_watch_monetization_types=flatrate`
 
-// let titulo = document.querySelector('.titulo_genero')
-
 let qstitulo = location.search
 let queryStringToObject = new URLSearchParams(qs);
 let idtitulo = queryStringToObject.get('id');

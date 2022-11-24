@@ -71,16 +71,15 @@ fetch(url_plataformas)
 				
 			}else{
 				
-                for (let i of plataformas_argentinas){
+                for (let i = 0; i<plataformas_argentinas.length; i++){
                     contenedor_html.innerHTML +=
                     `<div> 
-                    ${i.provider_name}
-                    <img src="https://image.tmdb.org/t/p/original${i.logo_path}" alt="${i.provider_name}" class="logo_plataformas"> </img>
+                    ${plataformas_argentinas[i].provider_name}
+                    <img src="https://image.tmdb.org/t/p/original${plataformas_argentinas[i].logo_path}" alt="${plataformas_argentinas[i].provider_name}" class="logo_plataformas"> </img>
                     </div>`
                 }
                     
 			}
-		
 		
     })
 
